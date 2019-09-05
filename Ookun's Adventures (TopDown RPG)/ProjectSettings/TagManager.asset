@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Sign
+  - breakable
+  - enemy
+  - PlayerSword
+  - SpawnPoint
+  - DungeonRooms
+  - DungeonPortal
+  - HouseDoor
+  - PLayerTriggerCollider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background (Base)
+    uniqueID: 3196331467
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Buildings
+    uniqueID: 2638515445
+    locked: 0
+  - name: Signs
+    uniqueID: 3436383339
+    locked: 0
+  - name: Player
+    uniqueID: 2314794547
+    locked: 0
+  - name: Breakables
+    uniqueID: 2012585413
+    locked: 0
