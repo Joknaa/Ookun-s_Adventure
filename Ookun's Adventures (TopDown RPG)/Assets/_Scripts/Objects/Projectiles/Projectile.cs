@@ -4,20 +4,40 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+
+    [HideInInspector] public Rigidbody2D ProjectileRigidBody;
+    [HideInInspector] public float LifeTimeCount;
+
     [Header("Projectile Variables: ")]
-    public Rigidbody2D ProjectileRigidBody;
+    public float LifeTime;
 
 
-    public virtual IEnumerator SendProjectileCo(GameObject ProjectileType, Transform target, Transform Sender, int TravelSpeed, float ProjectileAttackDelay)
+
+
+    public void Start()
     {
-        Debug.Log("Starting the Courotine ..");
+        ProjectileRigidBody = GetComponent<Rigidbody2D>();
+        LifeTimeCount = LifeTime;
+    }
+    
+    public void Update()
+    {
+        DestroyProjectileAfterLifeTime();
+    }
 
-        Vector3 DirectionTotarget = Vector3.MoveTowards(transform.position, target.position, TravelSpeed * Time.deltaTime);
-        GameObject TempProjectile;
-        TempProjectile = Instantiate(ProjectileType, Sender.position, Quaternion.identity);
-        ProjectileRigidBody.MovePosition(DirectionTotarget);
-        Destroy(TempProjectile, 5f);
+    public void DestroyProjectileAfterLifeTime()
+    {
+        LifeTimeCount -= Time.deltaTime;
+        if (LifeTimeCount <= 0)
+        {
+            Destroy(this.gameObject);
+            LifeTimeCount = LifeTime;
+        }
+    }
 
-        yield return new WaitForSeconds(ProjectileAttackDelay);
+    public void LaunchProjectile(Vector2 Velocity, float ProjectileSpeed)
+    {
+        ProjectileRigidBody.velocity = Velocity * ProjectileSpeed;
+        Debug.Log("Projectile Sent");
     }
 }

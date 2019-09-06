@@ -4,32 +4,46 @@ using UnityEngine;
 
 public class Ranged : Enemy
 {
-    [HideInInspector] public RockProjectile ProjectileScript;
-    [HideInInspector] public GameObject ThisProjectile;
+    [HideInInspector] public float FireDelayCount;
 
     [Header("Projectile Variables: ")]
-    public GameObject ProjectilePrefab;
-
-
-
+    public GameObject Projectile;
+    public Transform FirePoint;
+    public int ProjectileSpeed;
+    public float FireDelay;
+    public bool CanShoot = true;
 
     public void Start()
     {
-        ThisProjectile = Instantiate(ProjectilePrefab);
-        ProjectileScript = ThisProjectile.GetComponent<RockProjectile>();
-        //ProjectileScript = GetComponent<RockProjectile>();
         EnemyCurrentState = EnemyState.idle;
         EnemyRigidbody = GetComponent<Rigidbody2D>();
         EnemyAnimator = GetComponent<Animator>();
         ChaseTarget = GameObject.FindWithTag("Player").transform;
         EnemyAnimator.SetBool("WakeUp", true);
-
+        FireDelayCount = FireDelay;
     }
 
     void FixedUpdate()
     {
         ReactToPlayer();
+        DelayBetweenShots();
     }
 
     public virtual void ReactToPlayer() {}
+    public void DelayBetweenShots()
+    {
+        if (CanShoot == false)
+        {
+            FireDelayCount -= Time.deltaTime;
+            if (FireDelayCount <= 0)
+            {
+                CanShoot = true;
+                FireDelayCount = FireDelay;
+            }
+            else
+            {
+                CanShoot = false;
+            }
+        }
+    }
 }

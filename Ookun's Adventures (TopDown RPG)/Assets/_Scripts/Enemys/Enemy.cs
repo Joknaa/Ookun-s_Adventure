@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
         EnemyAnimator.SetBool("WakeUp", true);
     }
 
-    private void TakeDamage(float Damage)
+    public void TakeDamage(float Damage)
     {
         Health -= Damage;
         if (Health <= 0)
@@ -66,13 +66,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Knock (Rigidbody2D PlayerRigidbody, float KnockTime, float Damage)
+    public virtual void Knock (Rigidbody2D PlayerRigidbody, float KnockTime, float Damage)
     {
         StartCoroutine(KnockCo(PlayerRigidbody, KnockTime));
         TakeDamage(Damage);
     }
 
-    private IEnumerator KnockCo(Rigidbody2D PlayerRigidbody, float KnockTime)    // setting the knockback feature to the player also
+    public virtual IEnumerator KnockCo(Rigidbody2D PlayerRigidbody, float KnockTime)    // setting the knockback feature to the player also
     {
         if (PlayerRigidbody != null)
         {

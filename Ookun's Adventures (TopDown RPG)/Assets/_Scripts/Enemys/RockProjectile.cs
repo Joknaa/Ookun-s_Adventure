@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class RockProjectile : Projectile
 {
-    public GameObject ProjectileType;
-    
+    //public GameObject ProjectileType;
+    /*
 
     public void SendProjectile(GameObject ProjectileType, Transform target, Transform Sender, int TravelSpeed, float ProjectileAttackDelay)
     {
         Debug.Log("Starting the 'SendProjectile' method  ..");
         StartCoroutine(SendProjectileCo(ProjectileType, target, Sender, TravelSpeed, ProjectileAttackDelay));
-    }
-
+    }*/
+    /*
     public override IEnumerator SendProjectileCo(GameObject ProjectileType, Transform target, Transform Sender, int TravelSpeed, float ProjectileAttackDelay)
     {
         Debug.Log("Starting the Courotine ..");
@@ -25,6 +25,6 @@ public class RockProjectile : Projectile
 
         yield return new WaitForSeconds(ProjectileAttackDelay);
     }
-
+    */
 
 }

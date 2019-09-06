@@ -6,9 +6,6 @@ public class Torret : Ranged
 {
     [Header("Torret Variables: ")]
     public Collider2D GuardedArea;
-    public int ProjectileSpeed;
-    public float ProjectileAttackDelay;
-
 
 
     public override void ReactToPlayer()
@@ -16,7 +13,10 @@ public class Torret : Ranged
         bool InsideArea = GuardedArea.bounds.Contains(ChaseTarget.transform.position);
         if (InsideArea)
         {
-            ShootTheTarget();
+            if (CanShoot)
+            {
+                ShootTheTarget();
+            }
         }
         else
         {
@@ -27,16 +27,29 @@ public class Torret : Ranged
 
     public void ShootTheTarget()
     {
-        EnemyAnimator.SetBool("WakeUp", true);
-        ChangeEnemyStateTo(EnemyState.attack);
-        Vector3 DirectionTotarget = Vector3.MoveTowards(transform.position, ChaseTarget.position, MoveSpeed * Time.deltaTime);
-        UpdateEnemyAnimation(DirectionTotarget - transform.position);
-        ProjectileScript.SendProjectile(ThisProjectile, ChaseTarget, transform, ProjectileSpeed, ProjectileAttackDelay);
+        if (EnemyCurrentState == EnemyState.walk || EnemyCurrentState == EnemyState.idle && EnemyCurrentState != EnemyState.stagger)
+        {
+            CanShoot = false;
+            Vector3 DirectionToTarget = ChaseTarget.transform.position - transform.position;
+            EnemyAnimator.SetBool("WakeUp", true);
+            ChangeEnemyStateTo(EnemyState.walk);
+            UpdateEnemyAnimation(DirectionToTarget);
+
+            GameObject CloneProjectile = Instantiate(Projectile, FirePoint.position, Quaternion.identity); Debug.Log("Projectile Made");
+            CloneProjectile.GetComponent<Projectile>().LaunchProjectile(DirectionToTarget, ProjectileSpeed);
+        }
     }
 
     public void StopShooting()
     {
         ChangeEnemyStateTo(EnemyState.idle);
         EnemyAnimator.SetBool("WakeUp", false);
+    }
+
+
+    public override void Knock(Rigidbody2D PlayerRigidbody, float KnockTime, float Damage)
+    {
+        EnemyCurrentState = EnemyState.idle;
+        TakeDamage(Damage);
     }
 }
