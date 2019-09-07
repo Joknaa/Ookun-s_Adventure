@@ -7,7 +7,6 @@ public class Torret : Ranged
     [Header("Torret Variables: ")]
     public Collider2D GuardedArea;
 
-
     public override void ReactToPlayer()
     {
         bool InsideArea = GuardedArea.bounds.Contains(ChaseTarget.transform.position);
@@ -35,7 +34,7 @@ public class Torret : Ranged
             ChangeEnemyStateTo(EnemyState.walk);
             UpdateEnemyAnimation(DirectionToTarget);
 
-            GameObject CloneProjectile = Instantiate(Projectile, FirePoint.position, Quaternion.identity); Debug.Log("Projectile Made");
+            GameObject CloneProjectile = Instantiate(Projectile, FirePoint.position, Quaternion.identity);
             CloneProjectile.GetComponent<Projectile>().LaunchProjectile(DirectionToTarget, ProjectileSpeed);
         }
     }
@@ -52,4 +51,14 @@ public class Torret : Ranged
         EnemyCurrentState = EnemyState.idle;
         TakeDamage(Damage);
     }
+
+
+    /*public override void CheckDestroyProjectile()
+    {
+        bool ProjectileInArea = GuardedArea.bounds.Contains(Projectile.transform.position);
+        if (!ProjectileInArea)
+        {
+            Destroy(Projectile.gameObject);
+        }
+    }*/
 }

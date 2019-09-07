@@ -42,7 +42,7 @@ public class Patroller : Melee
                 CurrentPoint = 0;
                 CurrentGoal = Path[0];
             }
-            else
+            else 
             {
                 CurrentPoint++;
                 CurrentGoal = Path[CurrentPoint];

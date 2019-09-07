@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileRigidBody: {fileID: 6455607503094056350}
-  LaunchSpeed: 2
-  LifeTime: 0.5
+  LifeTimeCount: 0
+  LifeTime: 1
 --- !u!114 &8543168232254075587
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class Coins : PowerUp
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().PlaySound("PickUp_Coin");
             PlayerInventory.AddItem(Coin);
             PowerUpSignal.Raise();
             Destroy(this.gameObject);

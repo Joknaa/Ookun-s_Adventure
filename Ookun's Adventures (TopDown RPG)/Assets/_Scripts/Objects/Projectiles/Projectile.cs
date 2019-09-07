@@ -5,13 +5,11 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    [HideInInspector] public Rigidbody2D ProjectileRigidBody;
+    public Rigidbody2D ProjectileRigidBody;
     [HideInInspector] public float LifeTimeCount;
 
     [Header("Projectile Variables: ")]
     public float LifeTime;
-
-
 
 
     public void Start()
@@ -24,7 +22,7 @@ public class Projectile : MonoBehaviour
     {
         DestroyProjectileAfterLifeTime();
     }
-
+    
     public void DestroyProjectileAfterLifeTime()
     {
         LifeTimeCount -= Time.deltaTime;
@@ -38,6 +36,5 @@ public class Projectile : MonoBehaviour
     public void LaunchProjectile(Vector2 Velocity, float ProjectileSpeed)
     {
         ProjectileRigidBody.velocity = Velocity * ProjectileSpeed;
-        Debug.Log("Projectile Sent");
     }
 }

@@ -9,7 +9,7 @@ public class Ranged : Enemy
     [Header("Projectile Variables: ")]
     public GameObject Projectile;
     public Transform FirePoint;
-    public int ProjectileSpeed;
+    public float ProjectileSpeed;
     public float FireDelay;
     public bool CanShoot = true;
 
@@ -27,6 +27,7 @@ public class Ranged : Enemy
     {
         ReactToPlayer();
         DelayBetweenShots();
+        //CheckDestroyProjectile();
     }
 
     public virtual void ReactToPlayer() {}
@@ -46,4 +47,6 @@ public class Ranged : Enemy
             }
         }
     }
+
+    //public virtual void CheckDestroyProjectile() {}
 }
