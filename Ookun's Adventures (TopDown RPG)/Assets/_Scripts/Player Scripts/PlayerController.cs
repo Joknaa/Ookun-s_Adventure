@@ -13,10 +13,9 @@ public enum PlayerState
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector] private Rigidbody2D PlayerRigidbody;
-    [HideInInspector] private Animator PlayerAnimator;
+    [HideInInspector] public Animator PlayerAnimator;
     private Vector3 Change;
     private float DeathEffectDelay = 1f;
-
 
 
     public GameObject DeathEffect;
@@ -34,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public Inventory PlayerInventory;
     public SpriteRenderer ReceivedItemSprite;
 
+    [Header("GameStat: ")]
+    public GameStatEnum GameStat;
+
 
     void Start()
     {
@@ -44,16 +46,16 @@ public class PlayerController : MonoBehaviour
         PlayerAnimator.SetFloat("MoveY", -1);
         PlayerInitialHealth.InitialValue = 6;
         transform.position = PlayerStartingPosition.InitialValue;
+        
     }
 
 
     void Update()
     {
-        // Is the player in an Interaction ? 
-        if (PlayerCurrentState == PlayerState.interact)
-        {
-            return;
-        }
+        if (GameStat.CurrentGameState == global::GameStat.Paused) { return; }  // Is the game paused ?
+        if (PlayerCurrentState == PlayerState.interact) { return; }         // Is the player in an Interaction ? 
+
+        // if not .. then play !
         Change = Vector3.zero;
         Change.x = Input.GetAxisRaw("Horizontal");
         Change.y = Input.GetAxisRaw("Vertical");
@@ -88,6 +90,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Knock(float KnockTime, float Damage) // initial the knockback and Damage code ..
     {
+        FindObjectOfType<AudioManager>().PlaySound("Hurt");
+
         PlayerCurrentHealth.RuntimeValue -= Damage;
         PlayerHealthSignal.Raise();
 
@@ -104,6 +108,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDeathEffect()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Death");
         GameObject effect = Instantiate(DeathEffect, transform.position, Quaternion.identity);
         Destroy(effect, DeathEffectDelay);
 
@@ -123,6 +128,7 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator AttackCo()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Sword");
         PlayerAnimator.SetBool("Attacking", true);          // transition to the Attack state in the Animator .. 
         PlayerCurrentState = PlayerState.attack;              // set the current state to Attack ..
         yield return null;                              // wait for 1 frame ..

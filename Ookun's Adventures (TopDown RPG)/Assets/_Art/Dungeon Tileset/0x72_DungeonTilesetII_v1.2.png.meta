@@ -667,16 +667,16 @@ TextureImporter:
     second: 0x72_DungeonTilesetII_v1.2_220
   - first:
       213: -4786616968576104714
-    second: 0x72_DungeonTilesetII_v1.2_221
+    second: Ghoul01
   - first:
       213: -5112179916536593514
-    second: 0x72_DungeonTilesetII_v1.2_222
+    second: Ghoul02
   - first:
       213: 7827914723634178059
-    second: 0x72_DungeonTilesetII_v1.2_223
+    second: Ghoul03
   - first:
       213: 7398865188068008020
-    second: 0x72_DungeonTilesetII_v1.2_224
+    second: Ghoul04
   - first:
       213: -4756957076143365220
     second: 0x72_DungeonTilesetII_v1.2_225
@@ -6093,7 +6093,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_DungeonTilesetII_v1.2_221
+      name: Ghoul01
       rect:
         serializedVersion: 2
         x: 368
@@ -6114,7 +6114,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_DungeonTilesetII_v1.2_222
+      name: Ghoul02
       rect:
         serializedVersion: 2
         x: 384
@@ -6135,7 +6135,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_DungeonTilesetII_v1.2_223
+      name: Ghoul03
       rect:
         serializedVersion: 2
         x: 400
@@ -6156,7 +6156,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_DungeonTilesetII_v1.2_224
+      name: Ghoul04
       rect:
         serializedVersion: 2
         x: 416
@@ -7461,8 +7461,8 @@ TextureImporter:
       name: Orc06
       rect:
         serializedVersion: 2
-        x: 448
-        y: 288
+        x: 466
+        y: 215
         width: 16
         height: 32
       alignment: 0
@@ -8494,8 +8494,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8515,8 +8515,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8536,8 +8536,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8557,8 +8557,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8578,8 +8578,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8599,8 +8599,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8620,8 +8620,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8641,8 +8641,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

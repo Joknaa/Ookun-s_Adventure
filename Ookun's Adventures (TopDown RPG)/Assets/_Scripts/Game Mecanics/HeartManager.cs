@@ -33,7 +33,6 @@ public class HeartManager : MonoBehaviour
         float hp = PlayerCurrentHealth.RuntimeValue / 2 - 1;
         for (int i = 0; i < HeartConteinersCount.InitialValue; i++)
         {
-            Debug.Log(hp+1);
             if (hp > i)
             {
                 Hearts[i].sprite = FullHeart;

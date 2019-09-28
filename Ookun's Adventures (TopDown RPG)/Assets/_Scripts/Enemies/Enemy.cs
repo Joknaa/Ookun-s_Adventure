@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     public FloatValue MaxHealth;
     public string Name;
     public float Health;
-    public int BaseAttackDamage;
+    public float BaseAttackDamage;
     public float MoveSpeed;
     public float ChaseRange;
     public float AttackRange;
@@ -49,9 +49,11 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float Damage)
     {
+        FindObjectOfType<AudioManager>().PlaySound("Hurt");
         Health -= Damage;
         if (Health <= 0)
         {
+            FindObjectOfType<AudioManager>().PlaySound("Death");
             EnemyDeathEffect();
             this.gameObject.SetActive(false);
         }
@@ -84,7 +86,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    public void MoveEnemyTowardsTarget(Transform Target)
+    public virtual void MoveEnemyTowardsTarget(Transform Target)
     {
         if (EnemyCurrentState == EnemyState.walk || EnemyCurrentState == EnemyState.idle && EnemyCurrentState != EnemyState.stagger)      // is the enemy able to move ?
         {
@@ -96,13 +98,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void SetEnemyAnimationFloats(Vector2 Direction)
+    public virtual void SetEnemyAnimationFloats(Vector2 Direction)
     {
         EnemyAnimator.SetFloat("MoveX", Direction.x);
         EnemyAnimator.SetFloat("MoveY", Direction.y);
     }
 
-    public void UpdateEnemyAnimation(Vector2 Direction)
+    public virtual void UpdateEnemyAnimation(Vector2 Direction)
     {
         if (Mathf.Abs(Direction.x) > Mathf.Abs(Direction.y))
         {

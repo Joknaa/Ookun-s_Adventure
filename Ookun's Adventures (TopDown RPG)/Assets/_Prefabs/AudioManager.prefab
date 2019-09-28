@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1513687123475831889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513687123475831903}
+  - component: {fileID: 1513687123475831888}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513687123475831903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513687123475831889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1513687123475831888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513687123475831889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1affe6674d6f6ae40a9fff8ba031a86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - Name: PickUp_Coin
+    Clip: {fileID: 8300000, guid: bcdbb76c1c6ed98469cdb54f3c7c8610, type: 3}
+    Volume: 0.36
+    Pitch: 1
+    AudioSource: {fileID: 0}
+  - Name: TownTheme
+    Clip: {fileID: 8300000, guid: 070259022e48ea7498f434c6e5d167f7, type: 3}
+    Volume: 0
+    Pitch: 1
+    AudioSource: {fileID: 0}
+  - Name: Death
+    Clip: {fileID: 8300000, guid: a22ec219fe6310843a0090276d3f48ee, type: 3}
+    Volume: 0.82
+    Pitch: 1
+    AudioSource: {fileID: 0}
+  - Name: Hurt
+    Clip: {fileID: 8300000, guid: dd0e97ae38ee33441aaf0592430f04b6, type: 3}
+    Volume: 0.85
+    Pitch: 1
+    AudioSource: {fileID: 0}
+  - Name: Sword
+    Clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+    Volume: 0.85
+    Pitch: 1
+    AudioSource: {fileID: 0}

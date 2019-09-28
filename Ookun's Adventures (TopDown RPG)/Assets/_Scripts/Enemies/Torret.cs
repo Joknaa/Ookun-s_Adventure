@@ -51,14 +51,4 @@ public class Torret : Ranged
         EnemyCurrentState = EnemyState.idle;
         TakeDamage(Damage);
     }
-
-
-    /*public override void CheckDestroyProjectile()
-    {
-        bool ProjectileInArea = GuardedArea.bounds.Contains(Projectile.transform.position);
-        if (!ProjectileInArea)
-        {
-            Destroy(Projectile.gameObject);
-        }
-    }*/
 }

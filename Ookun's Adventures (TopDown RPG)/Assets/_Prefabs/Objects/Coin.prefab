@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpSignal: {fileID: 11400000, guid: 69f86fa12ce9e8b40908c975bee467f6, type: 2}
-  PickUpEffect: {fileID: 0}
+  PickUpEffect: {fileID: 4369600201820541009, guid: 928de77fbd11d7a418f0ecc509261b69,
+    type: 3}
   PlayerInventory: {fileID: 11400000, guid: ca4ac49fbbabf924390e5abc3fada762, type: 2}
   Coin: {fileID: 11400000, guid: 4b57d36f3fa10134e97b8e5e0413691b, type: 2}
