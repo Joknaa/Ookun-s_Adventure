@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &829366193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829366194}
+  m_Layer: 8
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &829366194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829366193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8915972249807750362}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8915972249807750359
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,7 +44,6 @@ GameObject:
   - component: {fileID: 8915972249807750363}
   - component: {fileID: 8915972249807750360}
   - component: {fileID: 8915972249807750366}
-  - component: {fileID: 8915972249807750367}
   - component: {fileID: 8915972249807750358}
   m_Layer: 8
   m_Name: Torret Log
@@ -30,10 +59,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8915972249807750359}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.14, y: -21.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 829366194}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -94,7 +124,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8915972249807750359}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -178,21 +208,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95244503, y: 1.3221703}
   m_EdgeRadius: 0
---- !u!114 &8915972249807750367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8915972249807750359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70e70e73e9921c45bb192b049aeb1eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Thrust: 3
-  KnockTime: 0.2
-  Damage: 1
 --- !u!114 &8915972249807750358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,11 +230,14 @@ MonoBehaviour:
   Name: Torret Log
   Health: 3
   BaseAttackDamage: 1
-  MoveSpeed: 0
+  MoveSpeed: 2
   ChaseRange: 0
   AttackRange: 0
-  ProjectileScript: {fileID: 0}
-  GuardedArea: {fileID: 0}
-  ProjectileType: {fileID: 0}
+  FireDelayCount: 0
+  Projectile: {fileID: 6455607503094056349, guid: f540f6a6d0c450d49976178d9065d6db,
+    type: 3}
+  FirePoint: {fileID: 829366194}
   ProjectileSpeed: 1
-  ProjectileAttackDelay: 1
+  FireDelay: 2
+  CanShoot: 1
+  GuardedArea: {fileID: 0}

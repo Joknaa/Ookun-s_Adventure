@@ -8,7 +8,7 @@ public enum PlayerState
     attack,
     interact,
     stagger
-}  // Setting the stats ..
+} 
 
 public class PlayerController : MonoBehaviour
 {
@@ -46,26 +46,33 @@ public class PlayerController : MonoBehaviour
         PlayerAnimator.SetFloat("MoveY", -1);
         PlayerInitialHealth.InitialValue = 6;
         transform.position = PlayerStartingPosition.InitialValue;
-        
     }
-
 
     void Update()
     {
-        if (GameStat.CurrentGameState == global::GameStat.Paused) { return; }  // Is the game paused ?
-        if (PlayerCurrentState == PlayerState.interact) { return; }         // Is the player in an Interaction ? 
-
-        // if not .. then play !
-        Change = Vector3.zero;
-        Change.x = Input.GetAxisRaw("Horizontal");
-        Change.y = Input.GetAxisRaw("Vertical");
-        if (Input.GetButtonDown("attack") && PlayerCurrentState != PlayerState.attack && PlayerCurrentState != PlayerState.stagger)
+        bool GamePaused = GameStat.CurrentGameState == global::GameStat.Paused;
+        if (GamePaused)
         {
-            StartCoroutine(AttackCo());
+            PauseTheGame();
+            return;
         }
-        else if (PlayerCurrentState == PlayerState.walk || PlayerCurrentState == PlayerState.idle)
+        else 
         {
-            UpdatePlayerAnimationAndMove();
+            PlayTheGame();
+            if (PlayerCurrentState == PlayerState.interact) { return; }         // Is the player in an Interaction ? 
+
+            // if not .. then play !
+            Change = Vector3.zero;
+            Change.x = Input.GetAxisRaw("Horizontal");
+            Change.y = Input.GetAxisRaw("Vertical");
+            if (Input.GetButtonDown("attack") && PlayerCurrentState != PlayerState.attack && PlayerCurrentState != PlayerState.stagger)
+            {
+                StartCoroutine(AttackCo());
+            }
+            else if (PlayerCurrentState == PlayerState.walk || PlayerCurrentState == PlayerState.idle)
+            {
+                UpdatePlayerAnimationAndMove();
+            }
         }
     }
 
@@ -159,5 +166,17 @@ public class PlayerController : MonoBehaviour
                 PlayerInventory.ShowenItem = null;
             }
         }
+    }
+
+
+
+    void PauseTheGame()
+    {
+        PlayerAnimator.SetBool("Moving", false);
+    }
+
+    void PlayTheGame()
+    {
+        PlayerAnimator.SetBool("Moving", true);
     }
 }

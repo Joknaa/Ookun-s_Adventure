@@ -19,7 +19,6 @@ public class GameStatEnum: ScriptableObject, ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         StartingGameStat = GameStat.Played;
-        Debug.Log("the GameState is set to pause");
     }
 
     public void OnBeforeSerialize() { }
