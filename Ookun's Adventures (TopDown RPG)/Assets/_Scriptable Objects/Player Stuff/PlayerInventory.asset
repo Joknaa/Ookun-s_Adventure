@@ -15,5 +15,5 @@ MonoBehaviour:
   ShowenItem: {fileID: 0}
   Items:
   - {fileID: 0}
-  NumberOfKeys: 2
-  NumberOfCoins: 2
+  NumberOfKeys: 0
+  NumberOfCoins: 0

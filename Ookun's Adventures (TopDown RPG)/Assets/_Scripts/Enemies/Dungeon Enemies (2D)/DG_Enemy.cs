@@ -5,8 +5,14 @@ using UnityEngine;
 public class DG_Enemy : Enemy
 {
 
-
-
+    public override void Start()
+    {
+        EnemyCurrentState = EnemyState.idle;
+        EnemyRigidbody = GetComponent<Rigidbody2D>();
+        EnemyAnimator = GetComponent<Animator>();
+        ChaseTarget = GameObject.FindWithTag("Player").transform;                // set a target ..
+        //EnemyAnimator.SetBool("WakeUp", true);
+    }
 
     public override void MoveEnemyTowardsTarget(Transform Target)
     {

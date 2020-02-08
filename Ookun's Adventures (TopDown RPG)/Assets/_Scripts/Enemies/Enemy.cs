@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         Health = MaxHealth.InitialValue;
     }
 
-    void Start()
+    public virtual void Start()
     {
         EnemyCurrentState = EnemyState.idle;
         EnemyRigidbody = GetComponent<Rigidbody2D>();

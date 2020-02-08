@@ -13,7 +13,7 @@ public class Ranged : Enemy
     public float FireDelay;
     public bool CanShoot = true;
 
-    public void Start()
+    public override void Start()
     {
         EnemyCurrentState = EnemyState.idle;
         EnemyRigidbody = GetComponent<Rigidbody2D>();

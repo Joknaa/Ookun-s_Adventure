@@ -40,6 +40,8 @@ public class StartingMenu : GameStatManager
     // if Exit is pressed => Exit the current build
     public void Fun_ExitGame()
     {
+        Application.Quit();
+        Debug.Log("test i am exiting ");
     }
 
 }

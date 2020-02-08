@@ -48,32 +48,23 @@ public class PlayerController : MonoBehaviour
         transform.position = PlayerStartingPosition.InitialValue;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        bool GamePaused = GameStat.CurrentGameState == global::GameStat.Paused;
-        if (GamePaused)
-        {
-            PauseTheGame();
-            return;
-        }
-        else 
-        {
-            PlayTheGame();
-            if (PlayerCurrentState == PlayerState.interact) { return; }         // Is the player in an Interaction ? 
+        if (PlayerCurrentState == PlayerState.interact) { return; }         // Is the player in an Interaction ? 
 
-            // if not .. then play !
-            Change = Vector3.zero;
-            Change.x = Input.GetAxisRaw("Horizontal");
-            Change.y = Input.GetAxisRaw("Vertical");
-            if (Input.GetButtonDown("attack") && PlayerCurrentState != PlayerState.attack && PlayerCurrentState != PlayerState.stagger)
-            {
-                StartCoroutine(AttackCo());
-            }
-            else if (PlayerCurrentState == PlayerState.walk || PlayerCurrentState == PlayerState.idle)
-            {
-                UpdatePlayerAnimationAndMove();
-            }
+        // if not .. then play !
+        Change = Vector3.zero;
+        Change.x = Input.GetAxisRaw("Horizontal");
+        Change.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetButtonDown("attack") && PlayerCurrentState != PlayerState.attack && PlayerCurrentState != PlayerState.stagger)
+        {
+            StartCoroutine(AttackCo());
         }
+        else if (PlayerCurrentState == PlayerState.walk || PlayerCurrentState == PlayerState.idle)
+        {
+            UpdatePlayerAnimationAndMove();
+        }
+
     }
 
     void UpdatePlayerAnimationAndMove()
@@ -95,6 +86,7 @@ public class PlayerController : MonoBehaviour
         Change.Normalize();
         PlayerRigidbody.MovePosition(transform.position + Change * Speed * Time.deltaTime);
     }
+
     public void Knock(float KnockTime, float Damage) // initial the knockback and Damage code ..
     {
         FindObjectOfType<AudioManager>().PlaySound("Hurt");
@@ -166,17 +158,5 @@ public class PlayerController : MonoBehaviour
                 PlayerInventory.ShowenItem = null;
             }
         }
-    }
-
-
-
-    void PauseTheGame()
-    {
-        PlayerAnimator.SetBool("Moving", false);
-    }
-
-    void PlayTheGame()
-    {
-        PlayerAnimator.SetBool("Moving", true);
     }
 }
