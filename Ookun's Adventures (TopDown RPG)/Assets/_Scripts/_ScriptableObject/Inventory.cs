@@ -10,6 +10,12 @@ public class Inventory : ScriptableObject
     public int NumberOfKeys = 0;
     public int NumberOfCoins = 0;
 
+    public void Awake()
+    {
+       NumberOfCoins = 0;
+       NumberOfKeys = 0;
+    }
+
     public void AddItem(Item ItemToAdd)
     {
         // is the Item a key ?

@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class PauseMenu : GameStatManager
+public class PauseMenu : Menus
 {
-    public GameStatEnum GameStat;
     [HideInInspector] public bool GamePaused;
-    public GameObject PauseMenuScreen;
-    //public string MenuScene;
+
+
+    public GameStatEnum GameStat;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseOrPlayTheGame();
-        }
+        if (Input.GetKeyDown(KeyCode.Escape)) PauseOrPlayTheGame();
     }
 
     public void PauseOrPlayTheGame()
@@ -34,14 +31,14 @@ public class PauseMenu : GameStatManager
     void PauseTheGame()
     {
         GameStat.CurrentGameState = global::GameStat.Paused;
-        PauseMenuScreen.SetActive(true);
+        MainMenu.SetActive(true);
         Time.timeScale = 0;
     }   
 
     void PlayTheGame()
     {
         GameStat.CurrentGameState = global::GameStat.Played;
-        PauseMenuScreen.SetActive(false);
+        MainMenu.SetActive(false);
         Time.timeScale = 1;
     }
 }

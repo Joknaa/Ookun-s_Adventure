@@ -16,4 +16,4 @@ MonoBehaviour:
   Items:
   - {fileID: 0}
   NumberOfKeys: 0
-  NumberOfCoins: 0
+  NumberOfCoins: 3

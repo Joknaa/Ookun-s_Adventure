@@ -1,13 +1,20 @@
 ﻿using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
+    [HideInInspector] public String MainTheme;
+
+
     public Sound[] Sounds;
+
 
     void Awake()
     {
+        String CurrentScene = SceneManager.GetActiveScene().name;
+
         foreach (Sound ThisSound in Sounds)
         {
             ThisSound.AudioSource = gameObject.AddComponent<AudioSource>();
@@ -20,7 +27,12 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlaySound("TownTheme");
+        String CurrentScene = SceneManager.GetActiveScene().name;
+
+        if (CurrentScene == "TheWorld") {  MainTheme = "TownTheme";  
+        } 
+        else if (CurrentScene == "Dungeon")  { MainTheme = "DungeonTheme"; }
+        PlaySound(MainTheme);
     }
 
 
@@ -28,6 +40,11 @@ public class AudioManager : MonoBehaviour
     {
         Sound ThisSound = Array.Find(Sounds,sound => sound.Name == SoundName);
         ThisSound.AudioSource.Play();
+    }
+
+    public void ChangeSoundVolume()
+    {
+
     }
 
 

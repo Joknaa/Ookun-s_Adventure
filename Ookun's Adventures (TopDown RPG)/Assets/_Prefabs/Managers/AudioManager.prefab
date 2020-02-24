@@ -46,12 +46,12 @@ MonoBehaviour:
   Sounds:
   - Name: PickUp_Coin
     Clip: {fileID: 8300000, guid: bcdbb76c1c6ed98469cdb54f3c7c8610, type: 3}
-    Volume: 0.36
+    Volume: 0.74
     Pitch: 1
     AudioSource: {fileID: 0}
   - Name: TownTheme
     Clip: {fileID: 8300000, guid: 070259022e48ea7498f434c6e5d167f7, type: 3}
-    Volume: 0
+    Volume: 0.38
     Pitch: 1
     AudioSource: {fileID: 0}
   - Name: Death

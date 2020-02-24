@@ -13,6 +13,8 @@ public enum Scenes
 }
 public class SceneTransitions : MonoBehaviour
 {
+    public GameObject SceneTransition;
+
     [Header("Scenes available: ")]
     public Scenes SceneToLoad;
 
@@ -33,14 +35,19 @@ public class SceneTransitions : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerPositionMemory.InitialValue = PlayerPosition;
+            SceneTransition.SetActive(true);
             FadeAnimator.SetTrigger("SceneToFade");
         }
     }
 
-    public void LoadSceneAfterAnimation()
+    public IEnumerator LoadSceneAfterAnimation()
     {
         ResetCameraBounds();
         SceneManager.LoadScene(SceneToLoad.ToString());
+        yield return new WaitForSecondsRealtime(1);
+        SceneTransition.SetActive(false);
+
+
     }
 
 

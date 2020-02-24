@@ -8,6 +8,7 @@ public class PowerUp : MonoBehaviour
     public Signals PowerUpSignal;
     public GameObject PickUpEffect;
 
+
     public void PickUpEffects()
     {
         if (PickUpEffect != null)
