@@ -2,6 +2,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Diagnostics;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -29,9 +31,21 @@ public class AudioManager : MonoBehaviour
     {
         String CurrentScene = SceneManager.GetActiveScene().name;
 
-        if (CurrentScene == "TheWorld") {  MainTheme = "TownTheme";  
-        } 
-        else if (CurrentScene == "Dungeon")  { MainTheme = "DungeonTheme"; }
+        switch (CurrentScene)
+        {
+            case "TheWorld":
+                MainTheme = "TownTheme";
+                break;
+            case "Dungeon":
+                MainTheme = "DungeonTheme";
+                break;
+            case "HouseInteriour":
+                MainTheme = "HouseInteriourTheme";
+                break;
+            default: 
+                break;
+        }
+
         PlaySound(MainTheme);
     }
 
@@ -44,7 +58,6 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeSoundVolume()
     {
-
     }
 
 

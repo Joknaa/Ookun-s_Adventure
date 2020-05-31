@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1affe6674d6f6ae40a9fff8ba031a86e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainTheme: 
   Sounds:
   - Name: PickUp_Coin
     Clip: {fileID: 8300000, guid: bcdbb76c1c6ed98469cdb54f3c7c8610, type: 3}
@@ -51,7 +52,7 @@ MonoBehaviour:
     AudioSource: {fileID: 0}
   - Name: TownTheme
     Clip: {fileID: 8300000, guid: 070259022e48ea7498f434c6e5d167f7, type: 3}
-    Volume: 0.38
+    Volume: 0.18
     Pitch: 1
     AudioSource: {fileID: 0}
   - Name: Death
@@ -66,6 +67,11 @@ MonoBehaviour:
     AudioSource: {fileID: 0}
   - Name: Sword
     Clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+    Volume: 0.85
+    Pitch: 1
+    AudioSource: {fileID: 0}
+  - Name: DungeonTheme
+    Clip: {fileID: 8300000, guid: 86bdd73dd88bad743a4fc3a315301123, type: 3}
     Volume: 0.85
     Pitch: 1
     AudioSource: {fileID: 0}

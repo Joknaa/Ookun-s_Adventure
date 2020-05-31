@@ -43,8 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b018a8f3fbd0cd84e8736d7a03ee2430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenu: {fileID: 0}
-  OptionMenu: {fileID: 0}
-  VolumeSlider: {fileID: 0}
+  Menu: {fileID: 0}
   GamePaused: 0
   GameStat: {fileID: 11400000, guid: 8029a78e80840cc4386d545340cb472e, type: 2}

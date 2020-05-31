@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class Menus : GameStatManager
 {
-
-    public GameObject MainMenu;
-    public GameObject OptionMenu;
-    public Slider VolumeSlider;
-
+    public GameObject Menu;
 
     public void Fun_NavigateMenu(GameObject MenuToActivate)
     {
@@ -17,27 +13,18 @@ public class Menus : GameStatManager
         if (MenuToActivateIsActive)
         {
             MenuToActivate.gameObject.SetActive(false);
-            MainMenu.gameObject.SetActive(true);
+            Menu.gameObject.SetActive(true);
         }
         else
         {
             MenuToActivate.gameObject.SetActive(true);
-            MainMenu.gameObject.SetActive(false);
+            Menu.gameObject.SetActive(false);
         }
     }
 
-
-    public void Fun_SoundVolume()
-    {
-
-    }
-
-
-    // if Exit is pressed => Exit the current build
     public void Fun_ExitGame()
     {
         Application.Quit();
         Debug.Log("test i am exiting ");
     }
-
 }

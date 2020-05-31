@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -7,12 +8,14 @@ public class PauseMenu : Menus
 {
     [HideInInspector] public bool GamePaused;
 
-
     public GameStatEnum GameStat;
+
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) PauseOrPlayTheGame();
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+            PauseOrPlayTheGame();
     }
 
     public void PauseOrPlayTheGame()
@@ -30,15 +33,16 @@ public class PauseMenu : Menus
 
     void PauseTheGame()
     {
+        Debug.Log("game paused");
         GameStat.CurrentGameState = global::GameStat.Paused;
-        MainMenu.SetActive(true);
+        Menu.SetActive(true);
         Time.timeScale = 0;
     }   
 
     void PlayTheGame()
     {
         GameStat.CurrentGameState = global::GameStat.Played;
-        MainMenu.SetActive(false);
+        Menu.SetActive(false);
         Time.timeScale = 1;
     }
 }
