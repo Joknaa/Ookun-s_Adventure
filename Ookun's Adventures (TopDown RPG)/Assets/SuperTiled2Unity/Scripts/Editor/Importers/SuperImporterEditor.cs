@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEditor;
-using UnityEditor.Experimental.AssetImporters;
+
 using UnityEngine;
 
 namespace SuperTiled2Unity.Editor
 {
-    public abstract class SuperImporterEditor<T> : ScriptedImporterEditor where T : SuperImporter
+    public abstract class SuperImporterEditor<T> : UnityEditor.AssetImporters.ScriptedImporterEditor where T : SuperImporter
     {
         private bool m_ShowDependencies;
         private bool m_ShowReferences;

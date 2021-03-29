@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Fujitsu\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Fujitsu\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Ookun's Adventures (TopDown RPG).-1754495492.00" t="ExcludeRecursive" />
+    <e p="O:\MyStuff\Files\mySpace\Projects\games\unity\Projects\GameProject_Ookun\Ookun's Adventures (TopDown RPG)" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_Scripts" t="Include">
+          <e p="_ScriptableObject" t="Include">
+            <e p="BoolValue.cs" t="Include" />
+            <e p="FloatValue.cs" t="Include" />
+            <e p="GameStatEnum.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="Signals.cs" t="Include" />
+            <e p="VectorValue.cs" t="Include" />
+          </e>
+          <e p="Enemies" t="Include">
+            <e p="Dungeon Enemies (2D)" t="Include">
+              <e p="DG_Enemy.cs" t="Include" />
+              <e p="DG_Melee.cs" t="Include" />
+              <e p="DG_Stander.cs" t="Include" />
+            </e>
+            <e p="Enemy.cs" t="Include" />
+            <e p="Guardian.cs" t="Include" />
+            <e p="Melee.cs" t="Include" />
+            <e p="Patroller.cs" t="Include" />
+            <e p="Ranged.cs" t="Include" />
+            <e p="RockProjectile.cs" t="Include" />
+            <e p="Stander.cs" t="Include" />
+            <e p="Torret.cs" t="Include" />
+          </e>
+          <e p="Game Mecanics" t="Include">
+            <e p="CameraMovement.cs" t="Include" />
+            <e p="KnockBack.cs" t="Include" />
+            <e p="Sound.cs" t="Include" />
+          </e>
+          <e p="GameManagers" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="CoinManager.cs" t="Include" />
+            <e p="GameStatManager" t="Include">
+              <e p="GameStatManager.cs" t="Include" />
+              <e p="Menus.cs" t="Include" />
+              <e p="PauseMenu.cs" t="Include" />
+              <e p="StartingMenu.cs" t="Include" />
+            </e>
+            <e p="HeartManager.cs" t="Include" />
+            <e p="InteractionBubbleManager.cs" t="Include" />
+            <e p="SignalListener.cs" t="Include" />
+          </e>
+          <e p="Objects" t="Include">
+            <e p="Interactables" t="Include">
+              <e p="Door.cs" t="Include" />
+              <e p="Interactable.cs" t="Include" />
+              <e p="Lever.cs" t="Include" />
+              <e p="Pot.cs" t="Include" />
+              <e p="Sign.cs" t="Include" />
+              <e p="TreasureChest.cs" t="Include" />
+            </e>
+            <e p="PowerUps" t="Include">
+              <e p="Coins.cs" t="Include" />
+              <e p="Hearts.cs" t="Include" />
+              <e p="PowerUp.cs" t="Include" />
+            </e>
+            <e p="Projectiles" t="Include">
+              <e p="Projectile.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Player Scripts" t="Include">
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerHit.cs" t="Include" />
+          </e>
+          <e p="Transitions" t="Include">
+            <e p="RoomTransitions.cs" t="Include" />
+            <e p="SceneTransitions.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Editor" t="Include">
+          <e p="MeleeEditor.cs" t="Include" />
+        </e>
+        <e p="SuperTiled2Unity" t="Include">
+          <e p="Examples" t="Include">
+            <e p="Overhead" t="Include">
+              <e p="Maps" t="Include">
+                <e p="Zoria Tileset" t="Include">
+                  <e p="readme.txt" t="Include" />
+                </e>
+              </e>
+              <e p="Sprites" t="Include">
+                <e p="MegaDad" t="Include">
+                  <e p="OverheadMegaDadController.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="CollisionObject.cs" t="Include" />
+            <e p="CollisionShapeType.cs" t="Include" />
+            <e p="CustomProperty.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="AnimationBuilder.cs" t="Include" />
+              <e p="AssetDatabaseEx.cs" t="Include" />
+              <e p="AssetPath.cs" t="Include" />
+              <e p="AssetTypes" t="Include">
+                <e p="SuperAsset.cs" t="Include" />
+                <e p="SuperAssetMap.cs" t="Include" />
+                <e p="SuperAssetSettings.cs" t="Include" />
+                <e p="SuperAssetTemplate.cs" t="Include" />
+                <e p="SuperAssetTileset.cs" t="Include" />
+              </e>
+              <e p="AtlasBuilder.cs" t="Include" />
+              <e p="AtlasSize.cs" t="Include" />
+              <e p="Attributes" t="Include">
+                <e p="AutoCustomTmxImporterAttribute.cs" t="Include" />
+              </e>
+              <e p="Collision" t="Include">
+                <e p="CollisionBuilder.cs" t="Include" />
+                <e p="CollisionClipper.cs" t="Include" />
+                <e p="CollisionClipperKey.cs" t="Include" />
+                <e p="Geometry" t="Include">
+                  <e p="ComposeConvexPolygons.cs" t="Include" />
+                  <e p="CompositionPolygon.cs" t="Include" />
+                  <e p="Math.cs" t="Include" />
+                  <e p="PolygonEdge.cs" t="Include" />
+                  <e p="PolygonEdgeGroup.cs" t="Include" />
+                  <e p="PolylineReduction.cs" t="Include" />
+                  <e p="Triangulator.cs" t="Include" />
+                </e>
+                <e p="TilePolygon.cs" t="Include" />
+                <e p="TilePolygonCollection.cs" t="Include" />
+              </e>
+              <e p="Config" t="Include">
+                <e p="SuperTiled2Unity_Config.cs" t="Include" />
+              </e>
+              <e p="CustomEditors" t="Include">
+                <e p="ColliderGizmos.cs" t="Include" />
+                <e p="SuperColliderComponentEditor.cs" t="Include" />
+              </e>
+              <e p="CustomImporters" t="Include">
+                <e p="CustomTmxImporter.cs" t="Include" />
+              </e>
+              <e p="DataCompression.cs" t="Include" />
+              <e p="DataEncoding.cs" t="Include" />
+              <e p="DrawOrder.cs" t="Include" />
+              <e p="Exceptions" t="Include">
+                <e p="TiledException.cs" t="Include" />
+              </e>
+              <e p="Extensions" t="Include">
+                <e p="ByteExtensions.cs" t="Include" />
+                <e p="CollisionObjectExtensions.cs" t="Include" />
+                <e p="CustomPropertyExtensions.cs" t="Include" />
+                <e p="GameObjectExtensions.cs" t="Include" />
+                <e p="RectUtil.cs" t="Include" />
+                <e p="StreamExtensions.cs" t="Include" />
+                <e p="StringExtensions.cs" t="Include" />
+                <e p="SuperMapExtensions.cs" t="Include" />
+                <e p="SuperTileExtensions.cs" t="Include" />
+                <e p="Texture2DExtensions.cs" t="Include" />
+                <e p="TypeExtensions.cs" t="Include" />
+                <e p="XmlExtensions.cs" t="Include" />
+              </e>
+              <e p="GlobalTileDatabase.cs" t="Include" />
+              <e p="GUI" t="Include">
+                <e p="GuiScopedBackgroundColor.cs" t="Include" />
+                <e p="GuiScopedIndent.cs" t="Include" />
+              </e>
+              <e p="Helpers" t="Include">
+                <e p="ChDir.cs" t="Include" />
+                <e p="NamedColors.cs" t="Include" />
+                <e p="ReadOnlyPropertyDrawer.cs" t="Include" />
+                <e p="UniqueNameifier.cs" t="Include" />
+              </e>
+              <e p="Importers" t="Include">
+                <e p="ImporterConstants.cs" t="Include" />
+                <e p="LayerSorterHelper.cs" t="Include" />
+                <e p="RendererSorter.cs" t="Include" />
+                <e p="SuperImportContext.cs" t="Include" />
+                <e p="SuperImporter.cs" t="Include" />
+                <e p="SuperImporterEditor.cs" t="Include" />
+                <e p="TiledAssetImporter.cs" t="Include" />
+                <e p="TiledAssetImporterEditor.cs" t="Include" />
+                <e p="TmxAssetImporter.cs" t="Include" />
+                <e p="TmxAssetImporter.GroupLayer.cs" t="Include" />
+                <e p="TmxAssetImporter.ImageLayer.cs" t="Include" />
+                <e p="TmxAssetImporter.ObjectLayer.cs" t="Include" />
+                <e p="TmxAssetImporter.TileLayer.cs" t="Include" />
+                <e p="TmxAssetImporterEditor.cs" t="Include" />
+                <e p="TsxAssetImporter.cs" t="Include" />
+                <e p="TsxAssetImporterEditor.cs" t="Include" />
+                <e p="TxAssetImporter.cs" t="Include" />
+                <e p="TxAssetImporterEditor.cs" t="Include" />
+              </e>
+              <e p="Loaders" t="Include">
+                <e p="CustomPropertyLoader.cs" t="Include" />
+                <e p="SuperGroupLayerLoader.cs" t="Include" />
+                <e p="SuperImageLayerLoader.cs" t="Include" />
+                <e p="SuperLayerLoader.cs" t="Include" />
+                <e p="SuperObjectLayerLoader.cs" t="Include" />
+                <e p="SuperTileLayerLoader.cs" t="Include" />
+                <e p="TilesetLoader.cs" t="Include" />
+              </e>
+              <e p="Math" t="Include">
+                <e p="ColliderFactory.cs" t="Include" />
+                <e p="ColliderFactoryIsometric.cs" t="Include" />
+                <e p="ColliderFactoryOrthogonal.cs" t="Include" />
+                <e p="PolygonUtils.cs" t="Include" />
+              </e>
+              <e p="ObjectTemplate.cs" t="Include" />
+              <e p="Postprocessors" t="Include">
+                <e p="AssetDependencies.cs" t="Include" />
+                <e p="SuperAssetDependencyPostprocessor.cs" t="Include" />
+                <e p="SuperTexturePostprocessor.cs" t="Include" />
+                <e p="TiledAssetDependencies.cs" t="Include" />
+              </e>
+              <e p="Properties" t="Include">
+                <e p="CustomObjectType.cs" t="Include" />
+              </e>
+              <e p="Settings" t="Include">
+                <e p="CustomPropertiesWindow.cs" t="Include" />
+                <e p="ST2USettings.cs" t="Include" />
+                <e p="ST2USettingsEditor.cs" t="Include" />
+                <e p="ST2USettingsProvider.cs" t="Include" />
+                <e p="SuperIcons.cs" t="Include" />
+                <e p="SuperSettingsImporter.cs" t="Include" />
+                <e p="SuperSettingsImporterEditor.cs" t="Include" />
+                <e p="TypePrefabReplacement.cs" t="Include" />
+              </e>
+              <e p="SortingMode.cs" t="Include" />
+              <e p="SuperTileset.cs" t="Include" />
+              <e p="ThirdParty" t="Include">
+                <e p="clipper.cs" t="Include" />
+                <e p="ImageHeader.cs" t="Include" />
+                <e p="LibTessDotNet" t="Include">
+                  <e p="Dict.cs" t="Include" />
+                  <e p="Geom.cs" t="Include" />
+                  <e p="Mesh.cs" t="Include" />
+                  <e p="MeshUtils.cs" t="Include" />
+                  <e p="PriorityHeap.cs" t="Include" />
+                  <e p="PriorityQueue.cs" t="Include" />
+                  <e p="Sweep.cs" t="Include" />
+                  <e p="Tess.cs" t="Include" />
+                </e>
+                <e p="MaxRectsBinPack.cs" t="Include" />
+                <e p="MultiValueDictionary.cs" t="Include" />
+              </e>
+              <e p="TileIdMath.cs" t="Include" />
+            </e>
+            <e p="Extensions" t="Include">
+              <e p="CustomPropertyExtensions.cs" t="Include" />
+              <e p="EnumerableExtensions.cs" t="Include" />
+              <e p="GameObjectExtensions.cs" t="Include" />
+              <e p="StringExtensions.cs" t="Include" />
+              <e p="SuperTileExtensions.cs" t="Include" />
+            </e>
+            <e p="FlipFlags.cs" t="Include" />
+            <e p="GridOrientation.cs" t="Include" />
+            <e p="MapOrientation.cs" t="Include" />
+            <e p="MapRenderOrder.cs" t="Include" />
+            <e p="Math" t="Include">
+              <e p="MatrixUtils.cs" t="Include" />
+            </e>
+            <e p="ReadOnlyAttribute.cs" t="Include" />
+            <e p="StaggerAxis.cs" t="Include" />
+            <e p="StaggerIndex.cs" t="Include" />
+            <e p="SuperColliderComponent.cs" t="Include" />
+            <e p="SuperCustomProperties.cs" t="Include" />
+            <e p="SuperGroupLayer.cs" t="Include" />
+            <e p="SuperImageLayer.cs" t="Include" />
+            <e p="SuperLayer.cs" t="Include" />
+            <e p="SuperMap.cs" t="Include" />
+            <e p="SuperObject.cs" t="Include" />
+            <e p="SuperObjectLayer.cs" t="Include" />
+            <e p="SuperTile.cs" t="Include" />
+            <e p="SuperTileLayer.cs" t="Include" />
+            <e p="TileObjectAnimator.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Tiled2Unity" t="Include">
+          <e p="Imported" t="Include">
+            <e p="1D.B.tiled2unity.xml" t="Include" />
+            <e p="1D.L.tiled2unity.xml" t="Include" />
+            <e p="1D.R.tiled2unity.xml" t="Include" />
+            <e p="1D.T.tiled2unity.xml" t="Include" />
+            <e p="2D.LB.tiled2unity.xml" t="Include" />
+            <e p="2D.RB.tiled2unity.xml" t="Include" />
+            <e p="2D.RL.tiled2unity.xml" t="Include" />
+            <e p="2D.TB.tiled2unity.xml" t="Include" />
+            <e p="2D.TL.tiled2unity.xml" t="Include" />
+            <e p="2D.TR.tiled2unity.xml" t="Include" />
+            <e p="3D.RBL.tiled2unity.xml" t="Include" />
+            <e p="3D.RTL.tiled2unity.xml" t="Include" />
+            <e p="3D.TLB.tiled2unity.xml" t="Include" />
+            <e p="3D.TRB.tiled2unity.xml" t="Include" />
+            <e p="4D.TRBL (Starting Room).tiled2unity.xml" t="Include" />
+            <e p="_ReadMe.txt" t="Include" />
+            <e p="Dungeon.R00.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R01.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R02.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R03.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R04.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R05.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R06.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R07.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R08.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R09.tiled2unity.xml" t="Include" />
+            <e p="Dungeon.R10.tiled2unity.xml" t="Include" />
+            <e p="House Interiour.tiled2unity.xml" t="Include" />
+            <e p="HouseInteriour.R00.tiled2unity.xml" t="Include" />
+            <e p="OverWorld test.tiled2unity.xml" t="Include" />
+            <e p="Room 00.tiled2unity.xml" t="Include" />
+            <e p="Room 01.tiled2unity.xml" t="Include" />
+            <e p="Room 02.tiled2unity.xml" t="Include" />
+            <e p="Room 03.tiled2unity.xml" t="Include" />
+            <e p="Room 04.tiled2unity.xml" t="Include" />
+            <e p="Room 05.tiled2unity.xml" t="Include" />
+            <e p="Room 06.tiled2unity.xml" t="Include" />
+            <e p="Room 07.tiled2unity.xml" t="Include" />
+            <e p="Room 08.tiled2unity.xml" t="Include" />
+            <e p="Room00.5.tiled2unity.xml" t="Include" />
+            <e p="Room00.tiled2unity.xml" t="Include" />
+            <e p="Room01.tiled2unity.xml" t="Include" />
+            <e p="Room02.tiled2unity.xml" t="Include" />
+            <e p="Room03.tiled2unity.xml" t="Include" />
+            <e p="Room04.tiled2unity.xml" t="Include" />
+            <e p="Room05.tiled2unity.xml" t="Include" />
+            <e p="Room06.tiled2unity.xml" t="Include" />
+            <e p="Room07.tiled2unity.xml" t="Include" />
+            <e p="Room08.tiled2unity.xml" t="Include" />
+            <e p="Room09.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R00.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R01.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R02.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R03.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R04.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R05.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R06.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R07.tiled2unity.xml" t="Include" />
+            <e p="TheWorld.R08.tiled2unity.xml" t="Include" />
+          </e>
+          <e p="License.txt" t="Include" />
+          <e p="Materials" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Meshes" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="CustomTiledImporterAttribute.cs" t="Include" />
+              <e p="ICustomTiledImporter.cs" t="Include" />
+              <e p="ImportTiled2Unity.cs" t="Include" />
+              <e p="ImportTiled2Unity.Material.cs" t="Include" />
+              <e p="ImportTiled2Unity.Mesh.cs" t="Include" />
+              <e p="ImportTiled2Unity.Prefab.cs" t="Include" />
+              <e p="ImportTiled2Unity.Texture.cs" t="Include" />
+              <e p="ImportTiled2Unity.Xml.cs" t="Include" />
+              <e p="ImportUtils.cs" t="Include" />
+              <e p="SortingLayerExposedEditor.cs" t="Include" />
+              <e p="SpriteDepthInMapEditor.cs" t="Include" />
+              <e p="Tiled2UnityMenuItems.cs" t="Include" />
+              <e p="TiledAssetPostProcessor.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="CircleObject.cs" t="Include" />
+              <e p="GameObjectExtensions.cs" t="Include" />
+              <e p="GPUInstancing.cs" t="Include" />
+              <e p="GroupLayer.cs" t="Include" />
+              <e p="ImportBehaviour.cs" t="Include" />
+              <e p="Layer.cs" t="Include" />
+              <e p="Log.cs" t="Include" />
+              <e p="ObjectLayer.cs" t="Include" />
+              <e p="PolygonObject.cs" t="Include" />
+              <e p="PolylineObject.cs" t="Include" />
+              <e p="RectangleObject.cs" t="Include" />
+              <e p="SortingLayerExposed.cs" t="Include" />
+              <e p="SpriteDepthInMap.cs" t="Include" />
+              <e p="TileAnimator.cs" t="Include" />
+              <e p="TiledMap.cs" t="Include" />
+              <e p="TileLayer.cs" t="Include" />
+              <e p="TileObject.cs" t="Include" />
+              <e p="TmxObject.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="shaColorKey-Instanced.shader" t="Include" />
+            <e p="shaColorKey.shader" t="Include" />
+            <e p="shaDefault-Instanced.shader" t="Include" />
+            <e p="shaDefault.shader" t="Include" />
+            <e p="shaDepth-Instanced.shader" t="Include" />
+            <e p="shaDepth.shader" t="Include" />
+            <e p="shaDepthColorKey-Instanced.shader" t="Include" />
+            <e p="shaDepthColorKey.shader" t="Include" />
+            <e p="shaDiffuseDepth-Instanced.shader" t="Include" />
+            <e p="shaDiffuseDepth.shader" t="Include" />
+            <e p="Tiled2Unity.cginc" t="Include" />
+          </e>
+          <e p="Textures" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Tiled2Unity.export.txt" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Ookun's Adventures (TopDown RPG).sln" t="IncludeFlat" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

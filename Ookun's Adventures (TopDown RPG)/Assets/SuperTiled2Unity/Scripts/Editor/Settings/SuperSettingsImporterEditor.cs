@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEditor;
-using UnityEditor.Experimental.AssetImporters;
+
 using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace SuperTiled2Unity.Editor
 {
     [CustomEditor(typeof(SuperSettingsImporter))]
-    public class SuperSettingsImporterEditor : ScriptedImporterEditor
+    public class SuperSettingsImporterEditor : UnityEditor.AssetImporters.ScriptedImporterEditor
     {
         public override bool showImportedObject { get { return false; } }
 

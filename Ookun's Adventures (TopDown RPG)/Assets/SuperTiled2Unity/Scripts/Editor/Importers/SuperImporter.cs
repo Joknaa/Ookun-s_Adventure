@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using UnityEditor;
-using UnityEditor.Experimental.AssetImporters;
+
 using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace SuperTiled2Unity.Editor
 {
-    public abstract class SuperImporter : ScriptedImporter
+    public abstract class SuperImporter : UnityEditor.AssetImporters.ScriptedImporter
     {
         [SerializeField]
         private List<string> m_MissingFiles = new List<string>();
@@ -52,9 +52,9 @@ namespace SuperTiled2Unity.Editor
         // For tracking assets and dependencies imported by SuperTiled2Unity
         private SuperAsset m_SuperAsset;
 
-        protected AssetImportContext AssetImportContext { get; private set; }
+        protected UnityEditor.AssetImporters.AssetImportContext AssetImportContext { get; private set; }
 
-        public override sealed void OnImportAsset(AssetImportContext ctx)
+        public override sealed void OnImportAsset(UnityEditor.AssetImporters.AssetImportContext ctx)
         {
             m_CachedDatabase.Clear();
             m_MissingFiles.Clear();
